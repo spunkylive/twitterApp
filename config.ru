@@ -2,6 +2,3 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run TwitterApp::Application
-
-$stdout.sync = true
-config.logger = Logger.new(STDOUT)
