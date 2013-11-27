@@ -1,0 +1,15 @@
+<% unless @followers.blank?  %>
+
+    <% @followers.each do |follower| %>
+        <div style="text-align: center;">
+          <% if is_follower(follower.user_id) %>
+              <%= is_follower(follower.user_id) %>
+          <% else %>
+              <%= render :partial => "shared/no_user", :locals => {:follower => false} %>
+          <% end %>
+        </div>
+
+    <% end %>
+<% else %>
+    <%= render :partial => "shared/no_user", :locals => {:follower => false} %>
+<% end %>

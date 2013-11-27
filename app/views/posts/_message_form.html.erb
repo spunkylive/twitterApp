@@ -1,0 +1,14 @@
+<div id="flash_error" style="display:none"></div>
+
+<% if logged_in? %>
+    <%= form_tag create_post_path do %>
+        <%= label_tag(:message, "What are you doing?") %><br />
+        <%= text_area_tag(:message, nil, :class => "input_box", :id=>'tweetBox', :onkeyup=>"countChar(this, 160)") %><br />
+        <%= radio_button_tag('is_visible', true, ""  )%>
+        <%= label_tag "Public Tweet"%>
+        <%= radio_button_tag('is_visible',false  )%>
+        <%= label_tag "Private Tweet"%>
+        <br/><br/>
+        <%= submit_tag("Tweet", :class => "btn" ) %>
+    <% end %>
+<% end %>

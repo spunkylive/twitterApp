@@ -1,0 +1,8 @@
+<%= render :partial => "message_form" %>
+<div id="posts">
+  <%= render :partial => @posts %>
+</div>
+<%= link_to "Follow People", user_detail_path(current_user.username) %>  |
+<%= link_to "My Followers", follower_path(current_user.username) %>
+
+
