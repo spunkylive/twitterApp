@@ -40,7 +40,6 @@ gem "bcrypt-ruby", :require => "bcrypt"
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-gem 'therubyracer-heroku', '0.8.1.pre3'
 
 group :test do
   # Pretty printed test output
