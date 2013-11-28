@@ -5,7 +5,13 @@ gem 'rails', '3.1.12'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem "pg"
+    
+group :production do
+    # Only gems for heroku
+    gem 'therubyracer-heroku', '0.8.1.pre3'
+    gem 'pg'
+end
+
 gem 'nifty-generators'
 
 
@@ -34,10 +40,11 @@ gem "bcrypt-ruby", :require => "bcrypt"
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'therubyracer-heroku', '0.8.1.pre3'
 
 group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end
 gem "mocha", :group => :test
-#ruby "2.0.0"
+ruby "2.0.0"
