@@ -5,7 +5,7 @@ gem 'rails', '3.1.12'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem "pg"
+gem "pg", "~> 0.17.0"
 gem 'nifty-generators'
 
 
@@ -40,4 +40,3 @@ group :test do
   gem 'turn', '~> 0.8.3', :require => false
 end
 gem "mocha", :group => :test
-#ruby "2.0.0"
