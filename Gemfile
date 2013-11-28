@@ -46,4 +46,4 @@ group :test do
   gem 'turn', '~> 0.8.3', :require => false
 end
 gem "mocha", :group => :test
-ruby "2.0.0"
+#ruby "2.0.0"
