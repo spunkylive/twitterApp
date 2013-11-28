@@ -12,8 +12,12 @@ group :production do
     gem 'pg'
 end
 
-gem 'nifty-generators'
+group :production do
+    gem 'mysql2'
+end
 
+
+gem 'nifty-generators'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,7 +27,6 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -45,5 +48,4 @@ group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end
-gem "mocha", :group => :test
-#ruby "2.0.0"
+
